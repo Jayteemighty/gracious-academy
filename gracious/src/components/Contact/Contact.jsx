@@ -40,12 +40,36 @@ const Contact = () => {
                 <h3>Send us a message <img src={msg_icon} alt="" /></h3>
                 <p>Feel free to reach out through contact form or find our contact information below. Your feedback, questions, and suggestions are important to us as we strive to provide exceptional service to our university community.</p>
                 <ul>
-                    <li><img src={mail_icon} alt="" />Contact@GreatStack.dev</li>
-                    <li><img src={phone_icon} alt="" />+1 123-456-7890</li>
-                    <li><img src={location_icon} alt="" />77 Massachusetts Ave, Cambridge<br /> MA 02139, United States</li>
+                    <li><img src={mail_icon} alt="" />admin@graciousacademy.com.br</li>
+                    <li><img src={phone_icon} alt="" />(11) 5835-2596</li>
+                    {/*<li><img src={location_icon} alt="" />77 Massachusetts Ave, Cambridge<br /> MA 02139, United States</li>*/}
                 </ul>
             </div>
+            
             <div className="contact-col">
+                <h3>Connect with us</h3>
+                <div className="social-icons">
+                    <a href="https://facebook.com/yourpage" target="_blank" rel="noopener noreferrer">
+                        <i className="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://instagram.com/yourpage" target="_blank" rel="noopener noreferrer">
+                        <i className="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/yourwhatsapplink" target="_blank" rel="noopener noreferrer">
+                        <i className="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://youtube.com/yourchannel" target="_blank" rel="noopener noreferrer">
+                        <i className="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
+                        <i className="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+
+
+
+            {/*<div className="contact-col">
                 <form onSubmit={onSubmit}>
                     <label>Your name</label>
                     <input type="text" name='name' placeholder='Enter your name' required />
@@ -56,8 +80,8 @@ const Contact = () => {
                     <button type='submit' className='btn dark-btn'>Submit now <img src={white_arrow} alt="" /></button>
                 </form>
                 <span>{result}</span>
-            </div>
-
+            </div>*/}
+            
         </div>
     )
 }
