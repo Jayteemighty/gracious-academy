@@ -1,4 +1,3 @@
-
 import React from 'react'
 import './About.css'
 import about_img from '../../assets/about2.png'
