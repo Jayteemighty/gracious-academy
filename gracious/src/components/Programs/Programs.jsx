@@ -1,63 +1,68 @@
 import React from 'react'
 import './Programs.css'
-import program_1 from '../../assets/program-1.png'
-import program_2 from '../../assets/program-2.png'
-import program_3 from '../../assets/program-3.png'
-import program_icon_1 from '../../assets/program-icon-1.png'
-import program_icon_2 from '../../assets/program-icon-2.png'
-import program_icon_3 from '../../assets/program-icon-3.png'
+
+const coursesData = [
+    {
+        category: "Cursos de Inglês",
+        courses: [
+            { name: "TOP SUMMIT", description: "Para adolescentes e adultos com nível intermediário ou avançado." },
+            { name: "DYNAMIC", description: "Para iniciantes com ênfase em conversação, leitura e escrita." },
+            { name: "GOLD", description: "Curso intensivo para quem já tem noção do idioma." },
+            { name: "GRACIOUS KIDS", description: "Curso de inglês divertido para crianças." }
+        ]
+    },
+    {
+        category: "TI / Tecnologia da Informação",
+        courses: [
+            { name: "AutoCAD", description: "Ferramenta para projetos mecânicos e plantas." },
+            { name: "Construct", description: "Criação de jogos usando programação visual." },
+            { name: "Robótica", description: "Curso multidisciplinar de programação e eletrônica." },
+            { name: "Informática Kids", description: "Curso para crianças de 8 a 11 anos, focado em tecnologia." },
+            { name: "Informática Avançado", description: "Curso avançado para otimizar produtividade digital." }
+        ]
+    },
+    {
+        category: "Gestão Empresarial e RH",
+        courses: [
+            { name: "Recursos Humanos", description: "Treinamento para gestão e desenvolvimento de talentos." }
+        ]
+    },
+    {
+        category: "Aulas Complementares",
+        courses: [
+            { name: "SONG", description: "Aulas de conversação através de músicas." },
+            { name: "MOVIE", description: "Aulas de interação baseadas em filmes." },
+            { name: "AULA ESPECIAL", description: "Aulas especiais para integração de alunos." }
+        ]
+    },
+    {
+        category: "Espanhol",
+        courses: [
+            { name: "Curso de Espanhol", description: "Desenvolva habilidades e técnicas de leitura e gramática." }
+        ]
+    }
+];
 
 const Programs = () => {
     return (
         <div className='programs'>
-            <div className="program">
-                <img src={program_1} alt="" />
-                <div className="caption">
-                    <img src={program_icon_1} alt="" />
-                    <p>Cursos: inglês</p>
+            {coursesData.map((category, index) => (
+                <div key={index} className="course-category">
+                    <h2>{category.category}</h2>
+                    <div className="course-list">
+                        {category.courses.map((course, idx) => (
+                            <div key={idx} className="program">
+                                <div className="caption">
+                                    <h3>{course.name}</h3>
+                                    <p>{course.description}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
-            </div>
-            <div className="program">
-                <img src={program_2} alt="" />
-                <div className="caption">
-                    <img src={program_icon_2} alt="" />
-                    <p>TI/ Tecnologia
-                    da Informação</p>
-                </div>
-            </div>
-            <div className="program">
-                <img src={program_3} alt="" />
-                <div className="caption">
-                    <img src={program_icon_3} alt="" />
-                    <p>Gestao de recursos humanos</p>
-                </div>
-            </div>
-
-            {/*<div className="program">
-                <img src={program_1} alt="" />
-                <div className="caption">
-                    <img src={program_icon_1} alt="" />
-                    <p>Gradution Degree</p>
-                </div>
-            </div>*/}
-            <div className="program">
-                <img src={program_2} alt="" />
-                <div className="caption">
-                    <img src={program_icon_2} alt="" />
-                    <p>Aulas
-                    complementares</p>
-                </div>
-            </div>
-            <div className="program">
-                <img src={program_3} alt="" />
-                <div className="caption">
-                    <img src={program_icon_3} alt="" />
-                    <p>Espanhol</p>
-                </div>
-            </div>
-
+            ))}
         </div>
-    )
+    );
 }
 
-export default Programs
+export default Programs;

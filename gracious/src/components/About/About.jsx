@@ -1,7 +1,7 @@
 
 import React from 'react'
 import './About.css'
-import about_img from '../../assets/about.png'
+import about_img from '../../assets/about2.png'
 import play_icon from '../../assets/play-icon.png'
 
 const About = ({setPlayState}) => {
@@ -12,11 +12,11 @@ const About = ({setPlayState}) => {
             <img src={play_icon} alt="" className='play-icon' onClick={()=>{setPlayState(true)}}/>
         </div>
         <div className="about-right">
-            <h3>ABOUT GRACIOUS ACADEMY</h3>
-            <h2>Nurturing Tomorrow's Leaders Today</h2>
-            <p>Embark on a transformative educational journey with our university's comprehensive education programs. Our cutting-edge curriculum is designed to empower students with the knowledge, skills, and experiences needed to excel in the dynamic field of education.</p>
-            <p>With a focus on innovation, hands-on learning, and personalized mentorship, our programs prepare aspiring educators to make a meaningful impact in classrooms, schools, and communities.</p>
-            <p>Whether you aspire to become a teacher, administrator, counselor, or educational leader, our diverse range of programs offers the perfect pathway to achieve your goals and unlock your full potential in shaping the future of education.</p>
+            <h3>SOBRE A GRACIOUS ACADEMY</h3>
+            <h2>Preparando os Líderes de Amanhã Hoje</h2>
+            <p>Embarque em uma jornada educacional transformadora com os programas abrangentes de nossa universidade. Nosso currículo inovador foi projetado para capacitar os alunos com o conhecimento, as habilidades e as experiências necessárias para se destacarem no dinâmico campo da educação.</p>
+            <p>Com foco em inovação, aprendizado prático e mentoria personalizada, nossos programas preparam futuros educadores para causar um impacto significativo nas salas de aula, nas escolas e nas comunidades.</p>
+            <p>Se você deseja se tornar professor, administrador, orientador ou líder educacional, nossa ampla gama de programas oferece o caminho ideal para alcançar seus objetivos e liberar todo o seu potencial na formação do futuro da educação.</p>
         </div>
       
     </div>

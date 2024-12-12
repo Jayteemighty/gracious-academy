@@ -1,57 +1,61 @@
-.programs{
-    margin: 80px auto;
+.programs {
     width: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.programs img{
-    width: 100%;
-    border-radius: 10px;
-    display: block;
-}
-.program{
-    flex-basis: 31%;
-    position: relative;
+    margin: 80px auto;
 }
 
-.caption{
-    border-radius: 10px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: rgba(0, 15, 152, 0.3);
-    display: flex;
-    align-items:center;
-    justify-content: center;
-    flex-direction: column;
-    color: #fff;
-    cursor: pointer;
-    opacity:0;
-    padding-top: 60%;
-    transition: 0.4s;
+.course-category {
+    margin-bottom: 40px;
 }
 
-.caption img{
-    width: 60px;
+.course-category h2 {
+    font-size: 28px;
+    color: #00796B;
+    margin-bottom: 20px;
+}
+
+.course-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.program {
+    flex: 1 1 calc(33% - 20px);
+    background: #f1f1f1;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.program:hover {
+    transform: translateY(-10px);
+}
+
+.caption h3 {
+    font-size: 20px;
+    color: #212EA0;
     margin-bottom: 10px;
 }
 
-.program:hover .caption{
-    opacity: 1;
-    padding-top: 0;
+.caption p {
+    color: #333;
+    font-size: 16px;
 }
 
-/*======== media querry =========*/
+/* Responsive Styles */
+@media (max-width: 900px) {
+    .program {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
 
-@media (max-width: 650px){
-    .programs{
+@media (max-width: 650px) {
+    .course-list {
         flex-direction: column;
     }
-    .program{
-        flex-basis: 100%;
-        margin: 20px;
+
+    .program {
+        flex: 1 1 100%;
     }
 }
